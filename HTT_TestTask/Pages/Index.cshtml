@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Продукт</th>
+            <th>Категория</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var el in Model.products)
+            {
+                <tr>
+                    <td>@el.Name</td>
+                    <td>@el.Category.Name</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
